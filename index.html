@@ -8,7 +8,7 @@
 <meta name="description" content="Pune Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260908-012959-6236">
+<meta name="build" content="20260908-192053-6479">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -898,7 +898,7 @@
      NOW (below, once iso() exists) is the reader's real date, and it decides what is
      still ahead of them. That is what stops a link shared in July from still offering
      you a 29 July show in September. */
-  var TODAY = "2026-09-08";      // refresh marker — bump on every update
+  var TODAY = "2026-09-09";      // refresh marker — bump on every update
   var BASELINE = "2026-08-16";   // initial load; entries from this date are not "new"
   var NEW_WINDOW_DAYS = 3;       // "NEW" badge lifetime after that
 
@@ -907,7 +907,11 @@
     {k:"craft",    label:"Arts & craft",  tone:"--c-craft"},
     {k:"music",    label:"Music & jams",  tone:"--c-music"},
     {k:"stage",    label:"Comedy & shows",tone:"--c-stage"},
-    {k:"outdoors", label:"Outdoors",      tone:"--c-outdoors"}
+    {k:"outdoors", label:"Outdoors",      tone:"--c-outdoors"},
+    {k:"ai",       label:"AI & tech",     tone:"--c-ai"},
+    {k:"dance",    label:"Dance",         tone:"--c-dance"},
+    {k:"books",    label:"Books & writing",tone:"--c-books"},
+    {k:"food",     label:"Food workshops",tone:"--c-food"}
   ];
   var CATMAP = {}; CATS.forEach(function(c){ CATMAP[c.k] = c; });
 
@@ -949,24 +953,31 @@
   /* VENUES:BEGIN */
   var VENUES = {
     "Anti Social, Shivaji Nagar":[18.53217,73.84966,2],
+    "Aufside Sports Bar, Wakad":[18.60225,73.76445,2],
     "Backspace, Balewadi":[18.58203,73.76898,2],
     "Ballr, Kalyani Nagar":[18.54814,73.90255,2],
     "Beer \u0026 Beans, Baner":[18.55899,73.78452,2],
     "Buntara Bhavana, Baner":[18.56449,73.76661,1],
+    "Cafe Buddy`s Espresso, Balewadi":[18.57908,73.76474,1],
     "Cafe Mhuzo Goa, Fergusson College Road":[18.52415,73.83859,2],
     "Cobbler \u0026 Crew, Kalyani Nagar":[18.54947,73.90258,1],
+    "DevX, Swati Park, Baner":[18.55899,73.78452,2],
     "Effingut, Koregaon Park":[18.53403,73.89850,1],
+    "Entain India Pune, Panchshil Business Park, Baner":[18.55899,73.78452,2],
     "FC Road Social, Shivaji Nagar":[18.53217,73.84966,2],
     "Flow Comedy Club, Aundh":[18.56188,73.81020,2],
     "Flow, Aundh":[18.56188,73.81020,2],
     "Flow, Baner":[18.55899,73.78452,2],
     "French tombs, Agarkar Nagar, Camp":[18.52162,73.87175,2],
     "Godaam Speciality Coffee Co., Camp":[18.52162,73.87175,2],
+    "High Spirits | Mundhwa, Pune":[18.53939,73.90530,1],
     "High Spirits, Mundhwa":[18.53939,73.90530,1],
     "Hyatt Pune, Kalyani Nagar":[18.55991,73.91236,1],
     "Jawaharlal Nehru Memorial Hall, Camp":[18.52162,73.87175,2],
+    "KOPA Mall":[18.53838,73.90772,1],
     "KOPA Mall, Koregaon Park":[18.53838,73.90772,1],
     "Koregaon Park Social, Mundhwa":[18.53860,73.90764,1],
+    "Kukoo, Mills":[18.53229,73.87091,2],
     "Kukoo, The Mills, Pune":[18.53229,73.87091,2],
     "Laugh and Vibe Club, Koregaon Park":[18.53662,73.89327,2],
     "Liberty Square, Viman Nagar":[18.57039,73.91333,2],
@@ -976,9 +987,12 @@
     "Pandit Bhimsen Joshi Kalamandir, Aundh":[18.56335,73.81289,1],
     "Phoenix Marketcity, Viman Nagar":[18.56204,73.91666,1],
     "Qala Cafe and Co-works, Baner":[18.55899,73.78452,2],
+    "Shisha Cafe":[18.53365,73.87083,1],
     "Shisha Cafe, Sangamvadi":[18.53365,73.87083,1],
     "Shisha Jazz Cafe, The Mills, Bund Garden Road":[18.52650,73.87911,2],
     "Shivaji Nagar":[18.53217,73.84966,1],
+    "spillhouse, Viman Nagar":[18.57039,73.91333,2],
+    "Technogise, Orville Business Port, Viman Nagar":[18.57039,73.91333,2],
     "The Fern Habitat, Mundhwa":[18.53432,73.92983,2],
     "The Game Palacio, Pune":[18.53365,73.87095,1],
     "The Habitat, Mundhwa":[18.53432,73.92983,2],
@@ -987,6 +1001,7 @@
     "Timezone, Phoenix Marketcity, Viman Nagar":[18.57039,73.91333,2],
     "Toyroom, Bund Garden Road":[18.52650,73.87911,2],
     "Two Good, Aundh":[18.55407,73.80486,1],
+    "URJA - Art Studio, Pimpri-Chinchwad":[18.62793,73.80098,2],
     "Vintage Comedy Club, Hinjawadi":[18.59275,73.73822,2],
     "Waari Comedy Club at Brewbox Blend Cafe, Erandwane":[18.50875,73.83184,2],
     "Xclusive Club and Kitchen, Mundhwa":[18.53432,73.92983,2]
@@ -1344,7 +1359,155 @@
 
     {date:"2026-10-31", a:"multi", cat:"music", name:"Sonu Nigam — The Revolution Tour",
      when:"Sat 31 Oct · 7:00 PM", where:"Pune — venue to be announced",
-     note:"A dated live-music programme at Pune — venue to be announced; timing and venue were checked on the event page.", cost:"₹1,499+", url:"https://www.district.in/events/the-revolution-india-tour-tour-ticket-booking", added:"2026-09-08"}
+     note:"A dated live-music programme at Pune — venue to be announced; timing and venue were checked on the event page.", cost:"₹1,499+", url:"https://www.district.in/events/the-revolution-india-tour-tour-ticket-booking", added:"2026-09-08"},
+
+    {date:"2026-09-12", a:"baner", cat:"craft", name:"DIY Shell Mirror",
+     when:"Sat 12 Sep · 3:32 PM–4:32 PM", where:"Beer & Beans: Baner, Pune",
+     note:"DIY Shell Mirror is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/diy-shell-mirror/3900030671992444", added:"2026-09-09"},
+
+    {date:"2026-09-11", a:"multi", cat:"outdoors", name:"Badminton Meet Pune",
+     when:"Fri 11 Sep · 6:00 PM–8:00 PM", where:"R.P.U.G.'s BADMINTON COURT Mohammadwadi",
+     note:"Badminton Meet Pune has a confirmed meeting point and dated activity window.", cost:"Ticketed", url:"https://allevents.in/pune/badminton-meet-pune/100002000006351837", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"camp", cat:"outdoors", name:"Mujumdar Wada Heritage Walk, Pune by PHW",
+     when:"Sat 12 Sep–Sun 13 Sep · from 6:00 PM", where:"Shaniwar Wada Bike Parking",
+     note:"Mujumdar Wada Heritage Walk, Pune by PHW has a confirmed meeting point and dated activity window.", cost:"₹350–₹800", url:"https://allevents.in/pune/mujumdar-wada-heritage-walk-pune-by-phw/80001272716563", added:"2026-09-09"},
+
+    {date:"2026-09-13", a:"camp", cat:"craft", name:"DIY Incense Holder",
+     when:"Sun 13 Sep · 3:29 PM–4:29 PM", where:"Kukoo, Mills",
+     note:"DIY Incense Holder is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/diy-incense-holder/3900030671191241", added:"2026-09-09"},
+
+    {date:"2026-09-11", a:"camp", cat:"outdoors", name:"Old Pune Ghost Walk | Deccan Drifts",
+     when:"Fri 11 Sep · 9:00 PM–11:00 PM", where:"Shaniwar Wada Bike Parking",
+     note:"Old Pune Ghost Walk | Deccan Drifts has a confirmed meeting point and dated activity window.", cost:"₹500–₹1,100", url:"https://allevents.in/pune/old-pune-ghost-walk-deccan-drifts/80002791258537", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"multi", cat:"games", name:"🎲 STRANGER MEETUP — BOARD GAME EDITION",
+     when:"Sat 12 Sep · 6:00 PM–8:00 PM", where:"CeeCee's",
+     note:"🎲 STRANGER MEETUP — BOARD GAME EDITION is a fixed-date social game session suited to joining with friends or solo.", cost:"₹399–₹499", url:"https://allevents.in/pune/stranger-meetup-board-game-edition/80001957031843", added:"2026-09-09"},
+
+    {date:"2026-09-13", a:"multi", cat:"craft", name:"Clay Sculpting Workshop",
+     when:"Sun 13 Sep · 4:01 PM–5:01 PM", where:"Nosh And Natter",
+     note:"Clay Sculpting Workshop is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/clay-sculpting-workshop/3900030669494343", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"multi", cat:"dance", name:"Garba Workshop with Jayesh Rathod",
+     when:"Sat 12 Sep · 2:00 PM–4:00 PM", where:"Muveo Studio",
+     note:"Garba Workshop with Jayesh Rathod is a dated dance session with a confirmed venue.", cost:"₹700", url:"https://allevents.in/pune/garba-workshop-with-jayesh-rathod/80008635749322", added:"2026-09-09"},
+
+    {date:"2026-09-19", a:"multi", cat:"craft", name:"Lego - Brick By Brick by Simplicity",
+     when:"Sat 19 Sep · 4:00 PM–5:00 PM", where:"The Commune Cafe",
+     note:"Lego - Brick By Brick by Simplicity is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/lego-brick-by-brick-by-simplicity/3900030669139301", added:"2026-09-09"},
+
+    {date:"2026-09-13", a:"kp", cat:"craft", name:"Tote Bag Painting",
+     when:"Sun 13 Sep · 1:00 PM–4:00 PM", where:"spillhouse, Viman Nagar",
+     note:"Tote Bag Painting is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/tote-bag-painting/3900030669052804", added:"2026-09-09"},
+
+    {date:"2026-09-13", a:"multi", cat:"craft", name:"Clay Flower Bouquet",
+     when:"Sun 13 Sep · 2:00 PM–3:00 PM", where:"Nosh And Natter",
+     note:"Clay Flower Bouquet is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/clay-flower-bouquet/3900030668874351", added:"2026-09-09"},
+
+    {date:"2026-09-26", a:"multi", cat:"food", name:"Masterclass by Masterchef Sanjyot Keer",
+     when:"Sat 26 Sep · 6:00 PM–7:00 PM", where:"Phoenix Mall of the Millennium",
+     note:"Masterclass by Masterchef Sanjyot Keer is a dated food-learning session with a confirmed venue.", cost:"Ticketed", url:"https://allevents.in/pune/masterclass-by-masterchef-sanjyot-keer/3900030668539623", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"baner", cat:"stage", name:"Unsupervised Thoughts-Standup Comedy Show by Omkar",
+     when:"Sat 12 Sep · 6:00 PM–7:00 PM", where:"The Comedy Clubhouse: Balewadi",
+     note:"Unsupervised Thoughts-Standup Comedy Show by Omkar is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/unsupervised-thoughts-standup-comedy-show-by-omkar/3900030667539234", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"multi", cat:"stage", name:"AWAKEN WORDS PUNE OPEN MIC",
+     when:"Sat 12 Sep · time on the listing", where:"The Mic Loft Studio",
+     note:"AWAKEN WORDS PUNE OPEN MIC is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/awaken-words-pune-open-mic/3900030666697858", added:"2026-09-09"},
+
+    {date:"2026-09-11", a:"camp", cat:"music", name:"3 Kings Tribute by the Kemosabes",
+     when:"Fri 11 Sep · 8:00 PM", where:"Shisha Cafe",
+     note:"3 Kings Tribute by the Kemosabes is a dated live-music programme with an event-specific booking page.", cost:"₹385", url:"https://allevents.in/pune/3-kings-tribute-by-the-kemosabes/3900030666025605", added:"2026-09-09"},
+
+    {date:"2026-09-11", a:"multi", cat:"music", name:"AUF SESSIONS ft. Amit Gaur at Aufside",
+     when:"Fri 11 Sep · 8:00 PM–11:00 PM", where:"Aufside Sports Bar, Wakad",
+     note:"AUF SESSIONS ft. Amit Gaur at Aufside is a dated live-music programme with an event-specific booking page.", cost:"Ticketed", url:"https://allevents.in/pune/auf-sessions-ft-amit-gaur-at-aufside/3900030665814407", added:"2026-09-09"},
+
+    {date:"2026-10-04", a:"baner", cat:"stage", name:"Peeyush Kumar Live - Stand Up Comedy",
+     when:"Sun 4 Oct · 6:00 PM–7:30 PM", where:"The Comedy Clubhouse: Balewadi",
+     note:"Peeyush Kumar Live - Stand Up Comedy is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/peeyush-kumar-live-stand-up-comedy/3900030664644954", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"baner", cat:"craft", name:"Pattachitra Painting",
+     when:"Sat 12 Sep · 4:03 PM–5:03 PM", where:"Beer & Beans: Baner, Pune",
+     note:"Pattachitra Painting is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/pattachitra-painting/3900030664631917", added:"2026-09-09"},
+
+    {date:"2026-09-13", a:"camp", cat:"music", name:"Jam2Gather - Live Bollywood Jamming FC Road Social",
+     when:"Sun 13 Sep · 7:30 PM", where:"FC Road Social",
+     note:"Jam2Gather - Live Bollywood Jamming FC Road Social is a dated live-music programme with an event-specific booking page.", cost:"Ticketed", url:"https://allevents.in/pune/jam2gather-live-bollywood-jamming-fc-road-social/3900030663850824", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"baner", cat:"craft", name:"Lotus Urli Candle Making Workshop",
+     when:"Sat 12 Sep · 4:00 PM–6:00 PM", where:"Cafe Buddy`s Espresso, Balewadi",
+     note:"Lotus Urli Candle Making Workshop is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/lotus-urli-candle-making-workshop/3900030662892318", added:"2026-09-09"},
+
+    {date:"2026-09-19", a:"camp", cat:"stage", name:"Beta Male by Varun Nair",
+     when:"Sat 19 Sep · 8:00 PM–9:30 PM", where:"Godaam Speciality Coffee Co.",
+     note:"Beta Male by Varun Nair is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/beta-male-by-varun-nair/3900030662345459", added:"2026-09-09"},
+
+    {date:"2026-09-11", a:"multi", cat:"stage", name:"Live Comedy in WAKAD @9PM by FEELz COMEDY",
+     when:"Fri 11 Sep · 9:00 PM–10:00 PM", where:"URJA - Art Studio, Pimpri-Chinchwad",
+     note:"Live Comedy in WAKAD @9PM by FEELz COMEDY is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/live-comedy-in-wakad-9pm-by-feelz-comedy/3900030661867536", added:"2026-09-09"},
+
+    {date:"2026-10-10", a:"camp", cat:"stage", name:"BLUNT ft. Onkar",
+     when:"Sat 10 Oct · 9:00 PM", where:"Jawaharlal Nehru Memorial Hall",
+     note:"BLUNT ft. Onkar is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/blunt-ft-onkar/3900030661550327", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"kp", cat:"food", name:"Pizza Making Date",
+     when:"Sat 12 Sep · 3:00 PM–5:00 PM", where:"PizzaExpress: Koregaon Park, Pune",
+     note:"Pizza Making Date is a dated food-learning session with a confirmed venue.", cost:"Ticketed", url:"https://allevents.in/pune/pizza-making-date/3900030661174858", added:"2026-09-09"},
+
+    {date:"2026-09-27", a:"camp", cat:"stage", name:"Safarnama by Krishna Shukla",
+     when:"Sun 27 Sep · 6:00 PM–8:00 PM", where:"Godaam Speciality Coffee Co.",
+     note:"Safarnama by Krishna Shukla is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/safarnama-by-krishna-shukla/3900030659385151", added:"2026-09-09"},
+
+    {date:"2026-09-13", a:"kp", cat:"stage", name:"Rajasekhar Mamidanna Live",
+     when:"Sun 13 Sep · 7:00 PM–8:15 PM", where:"The Habitat",
+     note:"Rajasekhar Mamidanna Live is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/rajasekhar-mamidanna-live/3900030657846011", added:"2026-09-09"},
+
+    {date:"2026-09-10", a:"baner", cat:"books", name:"Thursday Writing Session: Come, write with us!",
+     when:"Thu 10 Sep · 11:00 AM–1:00 PM", where:"Pagdandi Bookstore & Coffee",
+     note:"Thursday Writing Session: Come, write with us! is a dated literature or writing gathering with a confirmed venue.", cost:"Ticketed", url:"https://allevents.in/pune/thursday-writing-session-come-write-with-us/200030656991756", added:"2026-09-09"},
+
+    {date:"2026-09-11", a:"kp", cat:"music", name:"High Big Gigs feat. Shanka Tribe",
+     when:"Fri 11 Sep · 8:00–11:00 PM", where:"High Spirits | Mundhwa, Pune",
+     note:"High Big Gigs feat. Shanka Tribe is a dated live-music programme with an event-specific booking page.", cost:"₹300+", url:"https://allevents.in/pune/high-big-gigs-feat-shanka-tribe/4100030654407538", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"multi", cat:"music", name:"Sufi Night with Hassrat",
+     when:"Sat 12 Sep · 7:00 PM", where:"The Chandralok Kitchen Bar Banquet",
+     note:"Sufi Night with Hassrat is a dated live-music programme with an event-specific booking page.", cost:"Ticketed", url:"https://allevents.in/pune/sufi-night-with-hassrat/3900030397792204", added:"2026-09-09"},
+
+    {date:"2026-09-13", a:"baner", cat:"music", name:"Circl-O Bhajan Jamming",
+     when:"Sun 13 Sep · 7:00 PM–9:00 PM", where:"Pune International Centre",
+     note:"Circl-O Bhajan Jamming is a dated live-music programme with an event-specific booking page.", cost:"Ticketed", url:"https://allevents.in/pune/circl-o-bhajan-jamming/3900030574129303", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"multi", cat:"stage", name:"KALAMANCH (TAC) OPENMIC EVENT",
+     when:"Sat 12 Sep · 3:30 PM–7:00 PM", where:"The Third Space",
+     note:"KALAMANCH (TAC) OPENMIC EVENT is a dated live performance rather than a generic venue listing.", cost:"₹179–₹1,000", url:"https://allevents.in/pune/kalamanch-tac-openmic-event-tickets/80001431210876", added:"2026-09-09"},
+
+    {date:"2026-09-13", a:"camp", cat:"stage", name:"Straight Up - A standup Solo by Jaspreet Singh",
+     when:"Sun 13 Sep · 5:00 PM", where:"Jawaharlal Nehru Memorial Hall",
+     note:"Straight Up - A standup Solo by Jaspreet Singh is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/straight-up-a-standup-solo-by-jaspreet-singh/3900030273234545", added:"2026-09-09"},
+
+    {date:"2026-09-27", a:"kp", cat:"outdoors", name:"Pet Fed Pune: Express Edition 2026",
+     when:"Sun 27 Sep · 11:00 AM–9:00 PM", where:"KOPA Mall",
+     note:"Pet Fed Pune: Express Edition 2026 has a confirmed meeting point and dated activity window.", cost:"Ticketed", url:"https://allevents.in/pune/pet-fed-pune-express-edition-2026/3900030648235749", added:"2026-09-09"},
+
+    {date:"2026-10-14", a:"camp", cat:"stage", name:"Vipul Goyal Unleashed - Pune",
+     when:"Wed 14 Oct · 8:00 PM–9:15 PM", where:"Shreeram Lagoo Rang Avakash",
+     note:"Vipul Goyal Unleashed - Pune is a dated live performance rather than a generic venue listing.", cost:"Ticketed", url:"https://allevents.in/pune/vipul-goyal-unleashed-pune/3900030623858658", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"baner", cat:"ai", name:"The AI Engineering Stack",
+     when:"Sat 12 Sep · 10:00 AM–1:00 PM", where:"DevX, Swati Park, Baner",
+     note:"Indian Data Club combines AI product engineering sessions, a panel and structured networking; separate Luma approval is required.", cost:"Registration required", url:"https://www.meetup.com/indian-data-club/events/316250136/", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"kp", cat:"ai", name:"AAIF Agentic AI Day — Pune",
+     when:"Sat 12 Sep · 12:30–5:00 PM", where:"Technogise, Orville Business Port, Viman Nagar",
+     note:"A production-focused agentic AI day covering architecture, orchestration, MCP, memory, evaluation and security.", cost:"Registration required", url:"https://www.meetup.com/ksug-in/events/316397614/", added:"2026-09-09"},
+
+    {date:"2026-09-19", a:"baner", cat:"ai", name:"Building AI-Ready Teams",
+     when:"Sat 19 Sep · 10:00 AM–1:00 PM", where:"Entain India Pune, Panchshil Business Park, Baner",
+     note:"TechBrews covers AI-native team workflows, shared standards, adoption guardrails and practical engineering lessons.", cost:"Registration required", url:"https://www.meetup.com/tech-brews-at-entain/events/316366766/", added:"2026-09-09"}
   ];
 
   var CLASSES = [
