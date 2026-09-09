@@ -8,7 +8,7 @@
 <meta name="description" content="Pune Circle - where to be, every day of the week.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf9f3">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17130f">
-<meta name="build" content="20260908-192424-5312">
+<meta name="build" content="20260909-194433-5662">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -898,7 +898,7 @@
      NOW (below, once iso() exists) is the reader's real date, and it decides what is
      still ahead of them. That is what stops a link shared in July from still offering
      you a 29 July show in September. */
-  var TODAY = "2026-09-09";      // refresh marker — bump on every update
+  var TODAY = "2026-09-10";      // refresh marker — bump on every update
   var BASELINE = "2026-08-16";   // initial load; entries from this date are not "new"
   var NEW_WINDOW_DAYS = 3;       // "NEW" badge lifetime after that
 
@@ -908,6 +908,9 @@
     {k:"music",    label:"Music & jams",  tone:"--c-music"},
     {k:"stage",    label:"Comedy & shows",tone:"--c-stage"},
     {k:"outdoors", label:"Outdoors",      tone:"--c-outdoors"},
+    {k:"dance",    label:"Dance",         tone:"--c-dance"},
+    {k:"books",    label:"Books & writing", tone:"--c-books"},
+    {k:"social",   label:"Social",        tone:"--c-social"},
     {k:"ai",       label:"AI & tech",     tone:"--c-ai"}
   ];
   var CATMAP = {}; CATS.forEach(function(c){ CATMAP[c.k] = c; });
@@ -953,9 +956,11 @@
     "Aufside Sports Bar, Wakad":[18.60225,73.76445,2],
     "Backspace, Balewadi":[18.58203,73.76898,2],
     "Ballr, Kalyani Nagar":[18.54814,73.90255,2],
+    "Baner, Pune, Maharashtra, India":[18.55899,73.78452,1],
     "Beer \u0026 Beans, Baner":[18.55899,73.78452,2],
     "Buntara Bhavana, Baner":[18.56449,73.76661,1],
     "Cafe Buddy`s Espresso, Balewadi":[18.57908,73.76474,1],
+    "Cafe Coffee day, Ambegaon Budruk":[18.51370,73.81554,1],
     "Cafe Mhuzo Goa, Fergusson College Road":[18.52415,73.83859,2],
     "Cobbler \u0026 Crew, Kalyani Nagar":[18.54947,73.90258,1],
     "DevX, Swati Park, Baner":[18.55899,73.78452,2],
@@ -971,6 +976,7 @@
     "High Spirits, Mundhwa":[18.53939,73.90530,1],
     "Hyatt Pune, Kalyani Nagar":[18.55991,73.91236,1],
     "Jawaharlal Nehru Memorial Hall, Camp":[18.52162,73.87175,2],
+    "Kasba Ganapati":[18.51903,73.85724,1],
     "KOPA Mall":[18.53838,73.90772,1],
     "KOPA Mall, Koregaon Park":[18.53838,73.90772,1],
     "Koregaon Park Social, Mundhwa":[18.53860,73.90764,1],
@@ -979,7 +985,9 @@
     "Laugh and Vibe Club, Koregaon Park":[18.53662,73.89327,2],
     "Liberty Square, Viman Nagar":[18.57039,73.91333,2],
     "Meridian Icecream, FC Road":[18.51501,73.84222,2],
+    "Millers The Luxury Club":[18.53210,73.87054,1],
     "MILO Co-Work Cafe, FC Road":[18.51558,73.84206,2],
+    "Moulee\u0027s Tattoo Art Studio | Best Tattoo Artists in Pune, besides Ayodhya veg and Shanti honda showroom, Vishrantwadi Airport Road, Tingre Nagar, Pune, Maharashtra, India":[18.51331,73.82674,2],
     "Nuee, Kalyani Nagar":[18.54814,73.90255,2],
     "Pandit Bhimsen Joshi Kalamandir, Aundh":[18.56335,73.81289,1],
     "Phoenix Marketcity, Viman Nagar":[18.56204,73.91666,1],
@@ -991,6 +999,7 @@
     "spillhouse, Viman Nagar":[18.57039,73.91333,2],
     "Technogise, Orville Business Port, Viman Nagar":[18.57039,73.91333,2],
     "The Fern Habitat, Mundhwa":[18.53432,73.92983,2],
+    "The FML Lounge, Kalyani Nagar":[18.54814,73.90255,2],
     "The Game Palacio, Pune":[18.53365,73.87095,1],
     "The Habitat, Mundhwa":[18.53432,73.92983,2],
     "The Orchid Hotel, Balewadi":[18.57069,73.76378,1],
@@ -1386,7 +1395,7 @@
      when:"Sun 13 Sep · 4:01 PM–5:01 PM", where:"Nosh And Natter",
      note:"Clay Sculpting Workshop is a hands-on creative session with a fixed date and venue.", cost:"Ticketed", url:"https://allevents.in/pune/clay-sculpting-workshop/3900030669494343", added:"2026-09-09"},
 
-    {date:"2026-09-12", a:"multi", cat:"craft", name:"Garba Workshop with Jayesh Rathod",
+    {date:"2026-09-12", a:"multi", cat:"dance", name:"Garba Workshop with Jayesh Rathod",
      when:"Sat 12 Sep · 2:00 PM–4:00 PM", where:"Muveo Studio",
      note:"Garba Workshop with Jayesh Rathod is a hands-on creative session with a fixed date and venue.", cost:"₹700", url:"https://allevents.in/pune/garba-workshop-with-jayesh-rathod/80008635749322", added:"2026-09-09"},
 
@@ -1478,9 +1487,9 @@
      when:"Sun 13 Sep · 7:00 PM–9:00 PM", where:"Pune International Centre",
      note:"Circl-O Bhajan Jamming is a dated live-music programme with an event-specific booking page.", cost:"Ticketed", url:"https://allevents.in/pune/circl-o-bhajan-jamming/3900030574129303", added:"2026-09-09"},
 
-    {date:"2026-09-12", a:"multi", cat:"stage", name:"KALAMANCH (TAC) OPENMIC EVENT",
-     when:"Sat 12 Sep · 3:30 PM–7:00 PM", where:"The Third Space",
-     note:"KALAMANCH (TAC) OPENMIC EVENT is a dated live performance rather than a generic venue listing.", cost:"₹179–₹1,000", url:"https://allevents.in/pune/kalamanch-tac-openmic-event-tickets/80001431210876", added:"2026-09-09"},
+    {date:"2026-10-11", a:"multi", cat:"stage", name:"KALAMANCH (TAC) OPENMIC EVENT",
+     when:"Sun 11 Oct · 3:30–7:00 PM", where:"The Third Space",
+     note:"KALAMANCH (TAC) OPENMIC EVENT is a dated live performance rather than a generic venue listing.", cost:"₹179+", url:"https://allevents.in/pune/kalamanch-tac-openmic-event-tickets/80001431210876", added:"2026-09-09"},
 
     {date:"2026-09-13", a:"camp", cat:"stage", name:"Straight Up - A standup Solo by Jaspreet Singh",
      when:"Sun 13 Sep · 5:00 PM", where:"Jawaharlal Nehru Memorial Hall",
@@ -1504,7 +1513,163 @@
 
     {date:"2026-09-19", a:"baner", cat:"ai", name:"Building AI-Ready Teams",
      when:"Sat 19 Sep · 10:00 AM–1:00 PM", where:"Entain India Pune, Panchshil Business Park, Baner",
-     note:"TechBrews covers AI-native team workflows, shared standards, adoption guardrails and practical engineering lessons.", cost:"Registration required", url:"https://www.meetup.com/tech-brews-at-entain/events/316366766/", added:"2026-09-09"}
+     note:"TechBrews covers AI-native team workflows, shared standards, adoption guardrails and practical engineering lessons.", cost:"Registration required", url:"https://www.meetup.com/tech-brews-at-entain/events/316366766/", added:"2026-09-09"},
+
+    {date:"2026-09-12", a:"multi", cat:"social", name:"The Open Door",
+     when:"Sat 12 Sep–Sun 13 Sep · from 11:00 AM", where:"Moulee's Tattoo Art Studio | Best Tattoo Artists in Pune, besides Ayodhya veg and Shanti honda showroom, Vishrantwadi Airport Road, Tingre Nagar, Pune, Maharashtra, India",
+     note:"The Open Door — a two-day open studio at Moulee's, 12–13 September.15 artists. Live art. Flash tattoos. Hands-on workshops. A space you're invited into, not just an exhibition you walk past.Come meet the artists, watch them…", cost:"Free / ₹1,499 options", url:"https://allevents.in/pune/the-open-door-tickets/80003035027028", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"camp", cat:"social", name:"Social Mixer - Pune",
+     when:"Sat 12 Sep · 6:00 PM–7:00 PM", where:"FC Road Social",
+     note:"Step into an evening designed for connections, conversations, and good vibes! 🌟 Our Social Mixer brings together like-minded people over icebreakers, fun games, and engaging activities that make meeting new people effortless…", cost:"₹199–₹599", url:"https://allevents.in/pune/social-mixer-pune/4100030676114100", added:"2026-09-10"},
+
+    {date:"2026-09-13", a:"multi", cat:"stage", name:"Sunday Night Live @WAKAD by FEELz COMEDY",
+     when:"Sun 13 Sep · 7:00 PM–8:20 PM", where:"URJA - Art Studio, Pimpri-Chinchwad",
+     note:"FEELz COMEDY presents the most hilarious extravaganza stand-up comedy evening in town.Step into a world where laughter reigns supreme and mundane worries melt away like cotton candy in the rain.Our standup comedian paints life…", cost:"Ticketed", url:"https://allevents.in/pune/sunday-night-live-wakad-by-feelz-comedy/3900030676014148", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"camp", cat:"social", name:"The Paw Purrfect Marketing Workshop",
+     when:"Sat 12 Sep · 12:00 PM–4:00 PM", where:"Nine Lives Cat Cafe",
+     note:"Spend an exciting afternoon at Nine Lives Cat Cafe learning the basics of content creation, branding, and social media marketing through fun, interactive activities. From Reel challenges and branding games to creative team…", cost:"Ticketed", url:"https://allevents.in/pune/the-paw-purrfect-marketing-workshop/3900030676013204", added:"2026-09-10"},
+
+    {date:"2026-09-26", a:"kp", cat:"stage", name:"Khwaab : A Manchers Open Mic",
+     when:"Sat 26 Sep · 5:00 PM–7:00 PM", where:"The Mic Loft Studio",
+     note:"✨ Khwaab Open Mic is back in Pune! ✨Every story deserves to be heard. Every poem deserves a stage.Join us for an evening filled with poetry, storytelling, music, comedy, and heartfelt conversations as artists and dreamers come…", cost:"₹200–₹350", url:"https://allevents.in/pune/khwaab-a-manchers-open-mic-tickets/80002354747808", added:"2026-09-10"},
+
+    {date:"2026-09-27", a:"camp", cat:"stage", name:"Kal ki Chinta Nahi Karta ft. Ravi Gupta",
+     when:"Sun 27 Sep · 9:30 PM–10:45 PM", where:"Jawaharlal Nehru Memorial Hall",
+     note:"Forget your Kal ki Chinta and Join us in this super funny Show by Ravi Gupta. Kal Ki Chinta Nahi Karta is new stand up special by Ravi Gupta.", cost:"Ticketed", url:"https://allevents.in/pune/kal-ki-chinta-nahi-karta-ft-ravi-gupta/3900030675556849", added:"2026-09-10"},
+
+    {date:"2026-09-27", a:"multi", cat:"stage", name:"Beginner Improv Workshop",
+     when:"Sun 27 Sep · 4:00 PM–6:00 PM", where:"The Jackfruit Tree",
+     note:"Improv is about building instant connections, supercharging your creativity and rediscovering your fun.We will play theatre based games where you make choices in the moment, build on what others give you, and create stories…", cost:"Ticketed", url:"https://allevents.in/pune/beginner-improv-workshop/3900030675467020", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"kp", cat:"music", name:"Mehfil-e-Shaam — Sufi x Qawwali Fusion",
+     when:"Sat 12 Sep · 6:30–9:30 PM", where:"The FML Lounge, Kalyani Nagar",
+     note:"Mehfil-e-Shaam — Sufi x Qawwali Fusion is a verified live music programme at The FML Lounge, Kalyani Nagar, with a current event-specific page.", cost:"Ticketed", url:"https://allevents.in/pune/mehfil-e-shaam-sufi-x-qawwali-fusion/3900030675403302", added:"2026-09-10"},
+
+    {date:"2026-09-27", a:"kp", cat:"music", name:"LITJAM Pune: The OG Jam",
+     when:"Sun 27 Sep · 6:00 PM–8:30 PM", where:"High Spirits Cafe",
+     note:"Some songs become a part of our lives the moment we hear them. From timeless classics to today's biggest chartbusters, LITJAM Pune: The OG Jam brings together the most-loved, most-familiar hit songs across generations for one…", cost:"₹349–₹1,349", url:"https://allevents.in/pune/litjam-pune-the-og-jam-tickets/80001099105321", added:"2026-09-10"},
+
+    {date:"2026-09-13", a:"multi", cat:"books", name:"Books, Chai & More (Every 2nd Sunday of the Month)",
+     when:"Sun 13 Sep · 4:00 PM–5:30 PM", where:"Raah - A Literacy & Cultural Centre",
+     note:"This month, Books, Chai & More, the Raah Book Club, will be discussing the book Living Mountain by Amitav Ghosh.A new story from internationally renowned author Amitav Ghosh, The Living Mountain is a cautionary tale of how we…", cost:"Free", free:true, url:"https://allevents.in/pune/books-chai-and-more-every-2nd-sunday-of-the-month-tickets/80002187029524", added:"2026-09-10"},
+
+    {date:"2026-09-26", a:"baner", cat:"craft", name:"PotteryDen Hand-Building Workshop",
+     when:"Sat 26 Sep · 11:00 AM–1:00 PM", where:"PotteryDen Studio",
+     note:"Hand-Building Pottery Basics:Step into the fascinating world of pottery with our hand-building pottery workshop. This session introduces participants to the fundamentals of the craft, exploring the essential materials and…", cost:"Ticketed", url:"https://allevents.in/pune/potteryden-hand-building-worksho/3900030674948458", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"baner", cat:"craft", name:"Fuzzy Fridge Magnets",
+     when:"Sat 12 Sep · 2:30 PM–3:30 PM", where:"Beer & Beans: Baner, Pune",
+     note:"Add a touch of color and charm to your everyday space at our DIY Fuzzy Fridge Magnet Workshop. Create adorable textured fridge magnets using soft, fuzzy materials and playful designs that are sure to brighten up your kitchen,…", cost:"Ticketed", url:"https://allevents.in/pune/fuzzy-fridge-magnets/3900030674698251", added:"2026-09-10"},
+
+    {date:"2026-09-27", a:"multi", cat:"stage", name:"Ghar - An Open Mic For Words By Tape A Tale",
+     when:"Sun 27 Sep · 12:00 PM–1:30 PM", where:"Cafe Coffee day, Ambegaon Budruk",
+     note:"We organize monthly open mics where you can come and perform your stories and pieces. It will be like a little warm home for your words, and a place for our community to bond, give and receive feedback, and have a beautiful…", cost:"Ticketed", url:"https://allevents.in/pune/ghar-an-open-mic-for-words-by-tape-a-tale/3900030673914820", added:"2026-09-10"},
+
+    {date:"2026-09-13", a:"camp", cat:"craft", name:"Eco-Friendly Ganesha - Pune",
+     when:"Sun 13 Sep · 2:00 PM–3:00 PM", where:"FC Road Social",
+     note:"Create your own eco-friendly Ganesha idol at this hands-on workshop, crafted to bring home the blessings of Lord Ganesha the sustainable way.Style: Traditional idol-making with an eco-conscious, earthy finishMedium: Natural…", cost:"Ticketed", url:"https://allevents.in/pune/eco-friendly-ganesha-pune/3900030673429718", added:"2026-09-10"},
+
+    {date:"2026-09-14", a:"multi", cat:"outdoors", name:"Heritage Walk - Ganapati Special",
+     when:"Mon 14 Sep · 8:30 AM–10:30 AM", where:"Kasba Ganapati",
+     note:"The festive season beckons with the annual Ganeshotsav starting this year on 14th September. The festival is celebrated with great fervour across Pune. Join us to get glimpses of the festival, its history, the grand pandals…", cost:"Ticketed", url:"https://allevents.in/pune/heritage-walk-ganapati-special/200030673153244", added:"2026-09-10"},
+
+    {date:"2026-09-13", a:"baner", cat:"craft", name:"Paint your Personality Tote",
+     when:"Sun 13 Sep · 2:00 PM–3:30 PM", where:"House of Churros: Baner, Pune",
+     note:"Tote bag painting offers a delightful fusion of creativity and practicality. It is an engaging activity where you transform a plain canvas tote bag into a personalized work of art. Using fabric paints, stencils, markers, and…", cost:"Ticketed", url:"https://allevents.in/pune/paint-your-personality-tote/3900030673085318", added:"2026-09-10"},
+
+    {date:"2026-09-11", a:"multi", cat:"craft", name:"Ganpati Clay Miniature Idol Making Workshop",
+     when:"Fri 11 Sep · 2:00 PM–5:00 PM", where:"Sannidhi Dosa House",
+     note:"Create Your Own Little BappaThis Ganpati season slow down get creative and make something truly special with your own handsJoin The Aaroha Clay Ganpati Miniature Idol Making Workshop for a fun and hands on experience where you…", cost:"Ticketed", url:"https://allevents.in/pune/ganpati-clay-miniature-idol-making-workshop/3900030669354341", added:"2026-09-10"},
+
+    {date:"2026-09-28", a:"baner", cat:"dance", name:"Kpop dance competition",
+     when:"Mon 28 Sep · 9:00 AM–10:00 AM", where:"Baner, Pune, Maharashtra, India",
+     note:"K-POP GROUP DANCE COMPETITION17 SEPTEMBER 28, 2026K-POP - GROUP DANCE\"Onalharu-Today\"dance group warmly invite you to join our upcoming group dance competition!Teams:Circle | Triangle| SquarePreparation: 4 weeksWinner Team…", cost:"Ticketed", url:"https://allevents.in/pune/kpop-dance-competition/80002590856253", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"kp", cat:"craft", name:"Scrape Art",
+     when:"Sat 12 Sep · 2:00 PM–3:30 PM", where:"The Hype Cafe",
+     note:"Scrape Art WorkshopDiscover the beauty of abstract art in this fun and beginner friendly Scrape Art Workshop. Learn how to use palette knives, scrapers, and layering techniques to create stunning textures, bold patterns, and…", cost:"Ticketed", url:"https://allevents.in/pune/scrape-art/3900030668745819", added:"2026-09-10"},
+
+    {date:"2026-09-13", a:"baner", cat:"craft", name:"Erotic Painting",
+     when:"Sun 13 Sep · 2:00 PM–3:30 PM", where:"House of Churros: Baner, Pune",
+     note:"Erotic Painting WorkshopExplore the beauty of sensual expression through art in this guided painting workshop designed for adults. Using tasteful themes, expressive colors, and creative techniques, you will create an artwork…", cost:"Ticketed", url:"https://allevents.in/pune/erotic-painting/3900030668015920", added:"2026-09-10"},
+
+    {date:"2026-09-27", a:"camp", cat:"music", name:"TechPanda x Kenzani at Millers",
+     when:"Sun 27 Sep · 7:30 PM–1:30 AM", where:"Millers The Luxury Club",
+     note:"TechPanda x Kenzani at Millers is a verified live music programme at Millers The Luxury Club, with a current event-specific page.", cost:"Ticketed", url:"https://allevents.in/pune/techpanda-x-kenzani-live-at-millers/3900030666208115", added:"2026-09-10"},
+
+    {date:"2026-11-22", a:"camp", cat:"stage", name:"OVERSMARTGIRI by Aditya Gundeti",
+     when:"Sun 22 Nov · 6:00 PM–7:30 PM", where:"Jawaharlal Nehru Memorial Hall",
+     note:"This is one of a kind show which is a combination of standup, storytelling along with character comedy. Come witness some crazy stuff as Aditya takes you on a ride with his funny stories. This show will be closed by Vikas PT…", cost:"Ticketed", url:"https://allevents.in/pune/oversmartgiri-by-aditya-gundeti/3900030666025341", added:"2026-09-10"},
+
+    {date:"2026-10-03", a:"multi", cat:"craft", name:"Perfume Making n Home Fragrance Products",
+     when:"Sat 3 Oct · 3:00 PM", where:"Studio Artzone",
+     note:"#PerfumeMaking #HomeFragranceProducts #freshnener #reeddiffusers #bodymist #studioartzone #puneclasses #workshopsinpune #cosmeticmaking #studioartzonepune Learn Perfume Making & Home Fragrance Products @ Studio Artzone ~ 3…", cost:"Ticketed", url:"https://allevents.in/pune/perfume-making-n-home-fragrance-products/200030664727346", added:"2026-09-10"},
+
+    {date:"2026-10-17", a:"camp", cat:"craft", name:"Designer Soaps n Abhyang Kit",
+     when:"Sat 17 Oct · 3:00 PM–6:00 PM", where:"Studio Artzone",
+     note:"#WorkshopAlert #SoapMaking #SpaProducts #StudioArtzone #StudioArtzonepune #Workshopsinpune #Puneclasses #Pune #Deccan Aroma Spa n Designer Soap Making @ Studio Artzone ~ 17 Oct'26 (Sat) - Rs.1500/- Take home – Designer Soap…", cost:"Ticketed", url:"https://allevents.in/pune/designer-soaps-n-abhyang-kit/200030664726945", added:"2026-09-10"},
+
+    {date:"2026-10-03", a:"baner", cat:"stage", name:"Pehchan - Stand up Comedy by Banti Banerjee",
+     when:"Sat 3 Oct · 8:00 PM–9:00 PM", where:"Godaam Speciality Coffee Co.",
+     note:"Get ready for an evening of unapologetic, relatable and ridiculously funny stand-up comedy with Banti Banerjee.Known for her sharp observations on relationships, marriage, motherhood, Indian families, work and everyday life,…", cost:"Ticketed", url:"https://allevents.in/pune/pehchan-stand-up-comedy-by-banti-banerjee/3900030663678222", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"baner", cat:"craft", name:"DIY Clay Jewellery",
+     when:"Sat 12 Sep · 2:02 PM–3:02 PM", where:"Beer & Beans: Baner, Pune",
+     note:"Unleash your creativity and craft stunning jewelry with our whimsy in clay workshop Dive into the world of clay and learn to mold shape and design unique jewelry pieces that reflect your style and personality Our instructors…", cost:"Ticketed", url:"https://allevents.in/pune/diy-clay-jewellery/3900030662117347", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"camp", cat:"music", name:"The House of Maestro",
+     when:"Sat 12 Sep · 10:00 AM–6:00 PM", where:"Kumar Senate",
+     note:"The House of Maestros with Bhavya PanditWhat if you could learn singing directly from the voice behind the songs you love?Welcome to The House of Maestros, an immersive musical experience featuring acclaimed playback singer…", cost:"Ticketed", url:"https://allevents.in/pune/the-house-of-maestro/3900030555702245", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"camp", cat:"stage", name:"Sankarshan via Spruha - Mumbai & Pune",
+     when:"Sat 12 Sep · 12:30 PM–3:00 PM", where:"Bal Gandharva Rang Mandir",
+     note:"A show called Sankarshan via Spruha will have songs, poems, discussions, stories, and recollections. Sankarshan Karhade and Spruha Joshi will present the whole show. Vinay Cheulkar and Gandhar Jog will be co-artists.", cost:"Ticketed", url:"https://allevents.in/pune/sankarshan-via-spruha-mumbai-and-pune/3900030648342000", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"multi", cat:"music", name:"HALDI AFTER DARK FT. KRATEX",
+     when:"Sat 12 Sep–Sun 13 Sep · from 10:00 PM", where:"Epitome",
+     note:"Get ready to trade the shaadi celebrations for a night of high-energy beats at HALDI AFTER DARK a larger-than-life nightlife experience at Epitome, Pune.Featuring KRATEX performing LIVE, expect an explosive mix of energetic…", cost:"Ticketed", url:"https://allevents.in/pune/haldi-after-dark-ft-kratex/3900030624534251", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"multi", cat:"stage", name:"Puneri Paatya: Marathi Standup Comedy Show",
+     when:"Sat 12 Sep · 6:00 PM–7:30 PM", where:"Flow Comedy Club",
+     note:"Looking for a solid Marathi Show in Pune? Tired of only Hindi shows all around you? This Marathi Show promises to be one of the top shows you might have attended. Some of the best marathi comedians in the scene perform at our…", cost:"Ticketed", url:"https://allevents.in/pune/puneri-paatya-marathi-standup-comedy-show/3900030522672801", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"multi", cat:"stage", name:"LaughDa Club Weekend Comedy Night",
+     when:"Sat 12 Sep · 6:00 PM–7:15 PM", where:"Krishna Market",
+     note:"LaughDa Club brings you a live stand up comedy night with experienced and upcoming comedians. Fresh material, limited seating, and nonstop laughter", cost:"Ticketed", url:"https://allevents.in/pune/laughda-club-weekend-comedy-night/3900030527255807", added:"2026-09-10"},
+
+    {date:"2026-09-11", a:"multi", cat:"dance", name:"Salsa, Bachata, Partner Dance Workshop",
+     when:"Fri 11 Sep · 9:00 PM–10:30 PM", where:"Kiki",
+     note:"Welcome to Social Dancing, It is one of the best ways to learn dance for non-dancers in a relaxed environment while connecting with like-minded enthusiasts. Artist Praveen, one of Indias renowned social dance instructor who…", cost:"Ticketed", url:"https://allevents.in/pune/salsa-bachata-partner-dance-workshop/3900030629578152", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"kp", cat:"craft", name:"CLAY N SLAY - A Beginner-Friendly Clay Experience",
+     when:"Sat 12 Sep · 3:00 PM–4:30 PM", where:"The High Spirits Cafe",
+     note:"Discover the joy of creating with clay in this fun, hands-on workshop designed exclusively for beginners. No prior experience is needed - just bring your creativity!Choose Your Clay Creation:Make Your Own Trinket Tray:…", cost:"Ticketed", url:"https://allevents.in/pune/clay-n-slay-a-beginner-friendly-clay-experience/3900030558165736", added:"2026-09-10"},
+
+    {date:"2026-09-13", a:"multi", cat:"craft", name:"Eco Friendly Ganesha Workshop",
+     when:"Sun 13 Sep · 3:00 PM–4:00 PM", where:"Nosh And Natter",
+     note:"DIY Eco Friendly Ganesha Making is a soulful festive workshop where attendees learn the traditional art of sculpting their own eco safe idols of Lord Ganesha for Ganesh Chaturthi This hands on session teaches you how to work…", cost:"Ticketed", url:"https://allevents.in/pune/eco-friendly-ganesha-workshop/3900030574646707", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"baner", cat:"craft", name:"Ganesha Clay Work",
+     when:"Sat 12 Sep · 3:01 PM–4:01 PM", where:"Beer & Beans: Baner, Pune",
+     note:"Ganesh Clay Work WorkshopCreate a Ganesha figure using clay and simple hand building techniques. In this hands on workshop, participants will learn how to shape clay, add details and create a decorative Ganesha figure. The…", cost:"Ticketed", url:"https://allevents.in/pune/ganesha-clay-work/3900030556580136", added:"2026-09-10"},
+
+    {date:"2026-09-13", a:"multi", cat:"books", name:"Kids Creative Writing Workshop",
+     when:"Sun 13 Sep · 10:15 AM–12:30 PM", where:"Studio Kaavish",
+     note:"🌈 Imagining ordinary things as extraordinary ideas.🔍 Observing the stories hiding in everyday life.💫 Exploring metaphors, imagery, similes & personification.✍️ Creating your own poem or piece of creative writing.🎤 Sharing…", cost:"₹299+", url:"https://allevents.in/pimpri-chinchwad/kids-creative-writing-workshop-tickets/80002243119144", added:"2026-09-10"},
+
+    {date:"2026-09-12", a:"baner", cat:"games", name:"Epic Day Pass",
+     when:"Sat 12 Sep · 3:00 PM–8:00 PM", where:"Beer & Beans: Baner, Pune",
+     note:"Discover the Magic of Connection by getting access to our all day event pass Join us for the day packed with laughter inspiration and camaraderie At the heart of Small World we curating a tapestry of unique events and…", cost:"Ticketed", url:"https://allevents.in/pune/epic-day-pass/3900030633945513", added:"2026-09-10"},
+
+    {date:"2026-11-01", a:"multi", cat:"books", name:"SMB Free Book Swap Event NIBM Pune",
+     when:"Sun 1 Nov · 4:00 PM–5:00 PM", where:"BLATIXS TRAAACK ( NIBM )",
+     note:"Never pay for a book again. We meet and swap books every 3 weeks. All books are posted on our Whatsapp group beforehand. Mostly bestsellers.This event is completely free to attend. Join our WhatsApp…", cost:"Free", free:true, url:"https://allevents.in/pune/smb-free-book-swap-event-nibm-pune-tickets/80001442969645", added:"2026-09-10"},
+
+    {date:"2026-09-13", a:"multi", cat:"social", name:"Free 1-Day Meditation Training Program (Pune, India)",
+     when:"Sun 13 Sep · 10:00 PM–10:15 PM", where:"Pune, Maharashtra",
+     note:"Free Weekend 1-2 Day Class. Apply Here: https://forms.gle/XKGCNhrYKmEeiuVt5 This training program provides an introduction to Pranahuti Supported Meditation (PSM). This spiritual practice brings balanced living. It enables one…", cost:"Ticketed", url:"https://allevents.in/pune/free-1-day-meditation-training-program-pune-india/200030645317230", added:"2026-09-10"}
   ];
 
   var CLASSES = [
@@ -1701,7 +1866,7 @@
      only disclosed after you register, or a walking route across a whole precinct.
      Sending those to Maps drops the reader at a city centre and quietly pretends that
      is the venue — worse than offering nothing. Those cards get no Directions link. */
-  var UNROUTABLE = /^pune$|^pimpri[\s-]?chinchwad$|^(koregaon\s*park|kothrud|baner|aundh|balewadi|viman\s*nagar|hinjewadi|wakad|camp|deccan|shivajinagar|hadapsar|magarpatta|kalyani\s*nagar)$|varies|venue shared|venue on|to be announced|rotating|multiple venues|across the city/i;
+  var UNROUTABLE = /^pune(?:,\s*maharashtra)?$|^pimpri[\s-]?chinchwad$|^(koregaon\s*park|kothrud|baner|aundh|balewadi|viman\s*nagar|hinjewadi|wakad|camp|deccan|shivajinagar|hadapsar|magarpatta|kalyani\s*nagar)$|varies|venue shared|venue on|to be announced|rotating|multiple venues|across the city/i;
   /* One fragment rule, used by both the Directions link and the coordinate lookup, so a
      venue can never be routable for one and unknown to the other. tools\geocode.ps1
      carries the same rule — change it in both places or distances go missing. */
