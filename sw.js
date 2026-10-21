@@ -1,5 +1,5 @@
-﻿/* Pune Circle - build 20261021-192836-1727 */
-var CACHE = "pune-circle-20261021-192836-1727";
+﻿/* Pune Circle - build 20261021-193842-6265 */
+var CACHE = "pune-circle-20261021-193842-6265";
 var ASSETS = ["./", "./index.html", "./manifest.json",
               "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
